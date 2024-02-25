@@ -143,13 +143,37 @@ db.add_table(
         'films.csv',
         [
             Column("id", "INT"),
-            Column("imdb_id", "VARCHAR(255)"),
             Column("title", "VARCHAR(255)"),
             Column("overview", "TEXT"),
             Column("release_date", "DATE", lambda x: (datetime.strptime(x, "%d/%m/%Y") if '/' in x else datetime.strptime(x, "%Y-%m-%d").strftime("%Y-%m-%d"))),
             Column("runtime", "INT"),
             Column("original_language", "VARCHAR(255)"),
             Column("gener", "INT"),
+        ]
+    )
+)
+db.add_table(
+    Table(
+        mycursor,
+        "ratings",
+        'films.csv',
+        [
+            Column("id", "INT"),
+            Column("popularity", "FLOAT"),
+            Column("vote_average", "FLOAT"),
+            Column("vote_count", "INT"),
+        ]
+    )
+)
+db.add_table(
+    Table(
+        mycursor,
+        "revenue",
+        'films.csv',
+        [
+            Column("id", "INT"),
+            Column("budget", "INT"),
+            Column("revenue", "INT"),
         ]
     )
 )
