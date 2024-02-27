@@ -8,64 +8,40 @@ USER = "dbeaver"
 PASSWORD = "dbeaver"
 DATABASE = "project"
 
-mydb = mysql.connector.connect(
-  host=HOST,
-  user=USER,
-  password=PASSWORD,
-  database=DATABASE
-)
-
-tables = []
-
-mycursor = mydb.cursor()
-
 def load_data(data_file_name):
     return pd.read_csv(data_file_name)
 
 class Column:
-    def __init__(self, name: str, _type: str, converter_funtion = None):
+    def __init__(self, name: str, _type: str, converter_funtion = None, key: str = ''):
         self.name = name
+        self.key = key if key else name
         self.type = _type
         self.converter_funtion = converter_funtion
 
 
 class Table:
-    def __init__(self, mycursor, name: str, csv_path, columns: list[Column]):
+    def __init__(self, name: str, csv_path, columns: list[Column]):
         self.name = name
-        self.data = load_data(csv_path)
         self.columns = columns
-        self._mycursor = mycursor
+        self.data_file_path = csv_path
     
-    def get_records(self):
+    def get_records(self, data_file_path: str):
+        data = load_data(data_file_path)
         records = []
         for column in self.columns:
-            records.append(self.data[column.name].apply(column.converter_funtion) if column.converter_funtion else self.data[column.name])
+            records.append(data[column.key].apply(column.converter_funtion) if column.converter_funtion else data[column.key])
         return pd.DataFrame(records).T
     
     def get_columns(self):
         return self.columns
 
-    def cretae_table_command(self):
+    def cretae_table_command(self, cursor):
         cmd = f"CREATE TABLE IF NOT EXISTS {self.name} ("
         for column in self.columns:
             cmd += f"{column.name} {column.type},"
         cmd = cmd[:-1]
         cmd += ")"
-        self._mycursor.execute(cmd)
-
-    def insert_records(self):
-        cmd = f"INSERT INTO {self.name} ("
-        for column in self.columns:
-            cmd += f"{column.name},"
-        cmd = cmd[:-1]
-        cmd += ") VALUES ("
-        for i in range(len(self.columns)):
-            cmd += "%s,"
-        cmd = cmd[:-1]
-        cmd += ")"
-        self._mycursor.executemany(cmd, self.get_records().values.tolist())
-        mydb.commit()
-
+        cursor.execute(cmd)
 
 class DB:
     def __init__(self):
@@ -81,7 +57,6 @@ class DB:
 db = DB()
 db.add_table(
     Table(
-        mycursor,
         "geners",
         'genres.csv',
         [
@@ -92,7 +67,6 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "actors",
         'actors.csv',
         [
@@ -103,7 +77,6 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "actor_movies",
         'actor_movies.csv',
         [
@@ -114,7 +87,6 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "crew_members",
         'crew_members.csv',
         [
@@ -126,7 +98,6 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "crew_members_movies",
         'crew_members_movies.csv',
         [
@@ -138,8 +109,7 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
-        "films",
+        "movies",
         'films.csv',
         [
             Column("id", "INT"),
@@ -154,11 +124,10 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "ratings",
         'films.csv',
         [
-            Column("id", "INT"),
+            Column("movie_id", "INT", key="id"),
             Column("popularity", "FLOAT"),
             Column("vote_average", "FLOAT"),
             Column("vote_count", "INT"),
@@ -167,11 +136,10 @@ db.add_table(
 )
 db.add_table(
     Table(
-        mycursor,
         "revenue",
         'films.csv',
         [
-            Column("id", "INT"),
+            Column("movie_id", "INT", key="id"),
             Column("budget", "INT"),
             Column("revenue", "INT"),
         ]
@@ -179,5 +147,13 @@ db.add_table(
 )
 
 if __name__ == "__main__":
+    mydb = mysql.connector.connect(
+        host=HOST,
+        user=USER,
+        password=PASSWORD,
+        database=DATABASE
+    )
+    cursor = mydb.cursor()
+
     for table in db.get_tables():
-        table.cretae_table_command()
+        table.cretae_table_command(cursor)
