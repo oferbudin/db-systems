@@ -4,9 +4,10 @@ from datetime import datetime
 
 
 HOST = "localhost"
-USER = "dbeaver"
-PASSWORD = "dbeaver"
-DATABASE = "project"
+USER = "oferbudin"
+PASSWORD = "ofe6287"
+DATABASE = "oferbudin"
+PORT = 3305
 
 def load_data(data_file_name):
     return pd.read_csv(data_file_name)
@@ -151,7 +152,8 @@ if __name__ == "__main__":
         host=HOST,
         user=USER,
         password=PASSWORD,
-        database=DATABASE
+        database=DATABASE,
+        port=PORT
     )
     cursor = mydb.cursor()
 

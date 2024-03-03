@@ -1,4 +1,4 @@
-from create_db_script import db, HOST, USER, PASSWORD, DATABASE
+from create_db_script import db, HOST, USER, PASSWORD, DATABASE, PORT
 import mysql.connector
 
 def insert_recordsto_db(table, mydb, cursor):
@@ -19,7 +19,8 @@ def main():
         host=HOST,
         user=USER,
         password=PASSWORD,
-        database=DATABASE
+        database=DATABASE,
+        port=PORT
     )
     cursor = mydb.cursor()
 
