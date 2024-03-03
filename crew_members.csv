@@ -1,0 +1,914 @@
+id,name,job
+1,Aki Kaurismäki,Screenplay
+2,Mika Kaurismäki,Producer
+3,Albert Collins,Camera Operator
+4,Allison Anders,Writer
+5,Robert Rodriguez,Writer
+6,Quentin Tarantino,Writer
+7,Rodrigo García,Director of Photography
+8,Chuck Jones,Creative Consultant
+9,Sally Menke,Editor
+10,Ziad Doueiri,First Assistant Camera
+11,Guillermo Navarro,Director of Photography
+12,Douglas Aarniokoski,First Assistant Director
+13,Lawrence Bender,Producer
+14,Marilyn Vance,Executive Producer
+15,Alan Silvestri,Original Music Composer
+16,Stephen Hopkins,Director
+17,Phil Tippett,Animation
+18,George Lucas,Director
+19,John Williams,Original Music Composer
+20,Rick McCallum,Producer
+21,Gary Kurtz,Producer
+22,Gilbert Taylor,Director of Photography
+23,Gary Rydstrom,Sound Designer
+24,Angus MacLane,Animation
+25,Alan Barillaro,Animation Director
+26,Ralph Eggleston,Production Design
+27,Katherine Ringgold,Second Film Editor
+28,Peter Sohn,Story
+29,Tony Fucile,Visual Development
+30,Jerome Ranft,Sculptor
+31,Jeremy Lasky,Director of Photography
+32,John Lasseter,Executive Producer
+33,David Reynolds,Screenplay
+34,Bob Peterson,Screenplay
+35,Graham Walters,Producer
+36,Lee Unkrich,Co-Director
+37,Andrew Stanton,Original Story
+38,Thomas Newman,Original Music Composer
+39,Robert Zemeckis,Director
+40,Eric Roth,Screenplay
+41,Rick Carter,Production Design
+42,Chris L. Spellman,Leadman
+43,Leigh French,ADR & Dubbing
+44,Charles Newirth,Co-Producer
+45,Keith Campbell,Stunts
+46,Lindsey Buckingham,Thanks
+47,Randy Thom,Sound Re-Recording Mixer
+48,Bud Davis,Stunt Coordinator
+49,Conrad L. Hall,Director of Photography
+50,Alan Ball,Screenplay
+51,Naomi Shohan,Production Design
+52,Sam Mendes,Director
+53,Nicole Kidman,Thanks
+54,Chris Douridas,Music Supervisor
+55,Ana Maria Quintana,Script Supervisor
+56,Paula Abdul,Choreographer
+57,Mark Gordon,Dialogue Editor
+58,Cristen Carr Strubbe,Unit Production Manager
+59,Pete Townshend,Thanks
+60,Bruce Cohen,Producer
+61,Pandro S. Berman,Executive In Charge Of Production
+62,Orson Welles,Screenplay
+63,John Houseman,Writer
+64,Van Nest Polglase,Art Direction
+65,Robert Wise,Editor
+66,Gregg Toland,Director of Photography
+67,Bernard Herrmann,Original Music Composer
+68,Tom Steele,Stunts
+69,Mark Robson,Assistant Editor
+70,Lars von Trier,Director
+71,Friðrik Þór Friðriksson,Producer
+72,Robby Müller,Director of Photography
+73,Björk,Original Music Composer
+74,Avy Kaufman,Casting
+75,John Fawcett,Director
+76,Paul W.S. Anderson,Producer
+77,Jeremy Bolt,Producer
+78,Gareth Milne,Stunt Coordinator
+79,Iain Smith,Co-Producer
+80,Pascal Chaumeil,Second Unit
+81,Jean Paul Gaultier,Costume Design
+82,Eric Serra,Original Music Composer
+83,Robert Mark Kamen,Screenplay
+84,Luc Besson,Story
+85,Jean Giraud,Conceptual Design
+86,Simon Atherton,Armorer
+87,Thea von Harbou,Screenplay
+88,Walter Ruttmann,Director of Photography
+89,Fritz Lang,Editor
+90,Karl Freund,Director of Photography
+91,Edgar G. Ulmer,Set Designer
+92,Erich Pommer,Producer
+93,Isabel Coixet,Director
+94,Pedro Almodóvar,Executive Producer
+95,Agustín Almodóvar,Executive Producer
+96,Bruce Brown,Director
+97,Ted Elliott,Screenstory
+98,Terry Rossio,Screenplay
+99,Tom Waite,Stunts
+100,Stuart Beattie,Screenstory
+101,Ronna Kress,Casting
+102,Derek R. Hill,Art Direction
+103,Jerry Bruckheimer,Producer
+104,Klaus Badelt,Original Music Composer
+105,Christopher Boyes,Sound Designer
+106,David Goldsmith,Video Assist Operator
+107,Bruce Hendricks,Second Unit Cinematographer
+108,Toby Bronson,Set Costumer
+109,Chad Oman,Executive Producer
+110,Gore Verbinski,Director
+111,Cedric Nicolas-Troyan,Visual Effects
+112,Robin De Lano,Casting Assistant
+113,David Paris,Pilot
+114,John Ross,Stunts
+115,George Fisher,Stunts
+116,Ve Neill,Makeup Department Head
+117,Robert Richardson,Director of Photography
+118,Mahiro Maeda,Animation
+119,Bob Weinstein,Executive Producer
+120,Harvey Weinstein,Executive Producer
+121,RZA,Original Music Composer
+122,Peter Bogdanovich,Thanks
+123,Uma Thurman,Characters
+124,Julie Dreyfus,Casting Associate
+125,Gregory Nicotero,Makeup Effects
+126,Bruce Del Castillo,Grip
+127,Howard Berger,Makeup Effects
+128,Jim Morrison,Original Music Composer
+129,Roger Deakins,Director of Photography
+130,William Broyles Jr.,Author
+131,Mat Whitecross,Editor
+132,Andrew Eaton,Producer
+133,Michael Winterbottom,Author
+134,Francis Ford Coppola,Director
+135,Eddie Romero,Producer
+136,Carmine Coppola,Original Music Composer
+137,Vittorio Storaro,Director of Photography
+138,Barrie M. Osborne,Production Manager
+139,Kerry Rossall,Stunts
+140,John Ashley,Producer
+141,Joseph Conrad,Novel
+142,Jerry Ziesmer,Assistant Director
+143,John Milius,Screenplay
+144,Zakir Hussain,Musician
+145,Katsuhiro Ōtomo,Author
+146,Kouji Morimoto,Director
+147,Clint Eastwood,Director
+148,Lloyd Nelson,Script Supervisor
+149,Alex Green,Stunts
+150,David Webb Peoples,Screenplay
+151,Henry Bumstead,Production Design
+152,Lennie Niehaus,Original Music Composer
+153,Hans Zimmer,Original Music Composer
+154,John Pomeroy,Animation
+155,James L. Brooks,Producer
+156,David Silverman,Director
+157,Matt Groening,Producer
+158,Al Jean,Producer
+159,Mike Reiss,Screenplay
+160,Mike Scully,Screenplay
+161,David Mirkin,Screenplay
+162,Anthony DeRosa,Animation
+163,Michel Gondry,Story
+164,Ellen Kuras,Director of Photography
+165,Charlie Kaufman,Screenplay
+166,Jon Brion,Original Music Composer
+167,Alejandro González Iñárritu,Editor
+168,Gerardo Albarrán,Stunts
+169,Gustavo Santaolalla,Original Music Composer
+170,Guillermo Arriaga,Producer
+171,Guillermo del Toro,Editorial Coordinator
+172,Alfonso Cuarón,Thanks
+173,Carlos Cuarón,Thanks
+174,Rodrigo Prieto,Director of Photography
+175,Rodrigo Cortés,Thanks
+176,Luis Mandoki,Thanks
+177,Héctor Suárez,Thanks
+178,Denise Chamian,Casting
+179,Camille Friend,Hairstylist
+180,Kent Alterman,Executive Producer
+181,Toby Emmerich,Executive Producer
+182,Howard Shore,Original Music Composer
+183,David Cronenberg,Director
+184,Stanley Kubrick,Screenplay
+185,Anthony Masters,Production Design
+186,Arthur C. Clarke,Novel
+187,Craig Haagensen,Camera Operator
+188,Brian Smyj,Stunts
+189,Chuck Jeffreys,Stunts
+190,Margery Simkin,Casting
+191,Roger Pratt,Director of Photography
+192,Charles Roven,Producer
+193,Terry Gilliam,Director
+194,Matt Miller,Rigging Grip
+195,Alberto Iglesias,Original Music Composer
+196,Vicente Amigo,Original Music Composer
+197,Michel Ruben,Producer
+198,Scott Silver,Author
+199,Brian Grazer,Producer
+200,Curtis Hanson,Producer
+201,William Goldman,Screenplay
+202,Hany Abu-Assad,Author
+203,Peter Hermann,Line Producer
+204,Michael Kamen,Original Music Composer
+205,Charles McKeown,Screenplay
+206,Arnon Milchan,Producer
+207,Tom Stoppard,Screenplay
+208,T Bone Burnett,Executive Music Producer
+209,James Mangold,Screenplay
+210,James Keach,Producer
+211,Alan C. Blomquist,Executive Producer
+212,Phedon Papamichael,Director of Photography
+213,Heidi Pascoe,Stunts
+214,Brian Avery,Stunts
+215,Adruitha Lee,Color Designer
+216,Lori McCoy-Bell,Key Hair Stylist
+217,Robert Stromberg,Visual Effects Supervisor
+218,Johnny Cash,Book
+219,Rick Avery,Stunt Coordinator
+220,Mimi Lesseos,Stunts
+221,Buddy Van Horn,Stunt Coordinator
+222,Robert Lorenz,Assistant Director
+223,Kyle Eastwood,Additional Music
+224,Gary Lucchesi,Executive Producer
+225,Paul Haggis,Screenplay
+226,Stephen Daldry,Director
+227,Tessa Ross,Producer
+228,Jina Jay,Casting
+229,Tony Kaye,Director
+230,Thomas L. Bellissimo,Special Effects Supervisor
+231,Brian Witten,Co-Executive Producer
+232,Valerie McCaffrey,Casting
+233,Janusz Kamiński,Director of Photography
+234,Michael Kahn,Editor
+235,Josh Friedman,Author
+236,David Koepp,Author
+237,Steven Spielberg,Director
+238,Kathleen Kennedy,Producer
+239,H.G. Wells,Novel
+240,Gary A. Hecker,Foley
+241,Tim Burton,Producer
+242,Matthew Barry,Casting
+243,Victoria Thomas,Casting
+244,Colleen Atwood,Costume Design
+245,Kyle Balda,Animation
+246,Chris Lebenzon,Editor
+247,Danny Elfman,Original Music Composer
+248,Richard Linklater,Screenplay
+249,Emma Thomas,Associate Producer
+250,John Papsidera,Casting
+251,Wally Pfister,Director of Photography
+252,Aaron Ryder,Executive Producer
+253,Suzanne Todd,Producer
+254,Christopher Nolan,Screenplay
+255,Jonathan Nolan,Author
+256,Ridley Scott,Director
+257,Lawrence G. Paull,Production Design
+258,Marci Liroff,Casting
+259,Michael Kaplan,Costume Design
+260,Hampton Fancher,Screenplay
+261,Philip K. Dick,Thanks
+262,Dun Tan,Original Music Composer
+263,Zhang Yimou,Author
+264,Christopher Doyle,Director of Photography
+265,Kim Krizan,Characters
+266,Ethan Hawke,Screenplay
+267,Julie Delpy,Screenplay
+268,Hayao Miyazaki,Director
+269,Isao Takahata,Producer
+270,Joe Hisaishi,Original Music Composer
+271,Francine Maisler,Casting
+272,Paul Rubell,Editor
+273,William Goldenberg,Editor
+274,Pieter Jan Brugge,Producer
+275,Michael Mann,Writer
+276,Hans Bjerno,Helicopter Camera
+277,Janty Yates,Costume Design
+278,Chris Kentis,Director
+279,Tony Lamberti,Sound Re-Recording Mixer
+280,Graeme Revell,Original Music Composer
+281,Lawrence Kasdan,Screenplay
+282,Reg Harding,Stunts
+283,Robert Watts,Associate Producer
+284,Ben Burtt,Sound Designer
+285,Douglas Slocombe,Director of Photography
+286,Peter Diamond,Stunts
+287,Frank Marshall,Producer
+288,Philip Kaufman,Story
+289,Michael Bay,Production Intern
+290,Carl-Friedrich Koschnick,Director of Photography
+291,Michel Houellebecq,Novel
+292,Martin Todsharow,Original Music Composer
+293,Peter Howitt,Set Decoration
+294,Anthony Powell,Costume Design
+295,Jim Lovelett,Stunt Coordinator
+296,Emile Ardolino,Director
+297,Bonnie Timmermann,Casting
+298,Kenny Ortega,Choreographer
+299,Nick Gillard,Stunts
+300,Tip Tipping,Stunts
+301,Wayne Toth,Special Effects
+302,"Daniel Petrie, Jr.",Screenplay
+303,Harold Faltermeyer,Original Music Composer
+304,Martin Brest,Director
+305,Don Simpson,Producer
+306,Bruce Surtees,Director of Photography
+307,Luis Buñuel,Author
+308,Michael Glawogger,Author
+309,Saul Bass,Title Graphics
+310,Otto Preminger,Producer
+311,Duke Ellington,Original Music Composer
+312,Jonathan Hensleigh,Screenplay
+313,Gale Anne Hurd,Producer
+314,J.J. Abrams,Screenplay
+315,Tony Gilroy,Screenplay
+316,Ali Akdeniz,Production Manager
+317,Yolanda Toussieng,Hair Department Head
+318,Tony Scott,Director
+319,Larry Ferguson,Screenplay
+320,Eddie Murphy,Story
+321,Rosanna Norton,Costume Design
+322,Donald Kushner,Producer
+323,Lisa Gerrard,Original Music Composer
+324,William Nicholson,Screenplay
+325,John Logan,Screenplay
+326,Pietro Scalia,Editor
+327,Alexander Witt,Second Unit Cinematographer
+328,Ismael Martínez,Stunts
+329,Cayetana Guillén Cuervo,Thanks
+330,Guy Ritchie,Director
+331,Matthew Vaughn,Producer
+332,Susanne Bier,Director
+333,Anders Thomas Jensen,Screenplay
+334,Kris Kristofferson,Thanks
+335,Michael Chapman,Director of Photography
+336,Michael Phillips,Producer
+337,Martin Scorsese,Director
+338,Paul Schrader,Writer
+339,Tom Tykwer,Original Music Composer
+340,Wolfgang Becker,Thanks
+341,Bob Gale,Producer
+342,Eric Stoltz,Stunts
+343,Dean Cundey,Director of Photography
+344,Charles L. Campbell,Supervising Sound Editor
+345,Walter Scott,Stunt Coordinator
+346,John McTiernan,Director
+347,Joel Silver,Producer
+348,Lawrence Gordon,Producer
+349,Donald McAlpine,Director of Photography
+350,Frank Mitchell,Greensman
+351,Craig R. Baxley,Stunt Coordinator
+352,James B. Campbell,Orchestrator
+353,Charles A. Tamburro,Aerial Coordinator
+354,Noel Gallagher,Music
+355,Trudie Styler,Executive Producer
+356,Zbigniew Preisner,Original Music Composer
+357,Slawomir Idziak,Director of Photography
+358,Agnieszka Holland,Author
+359,Krzysztof Kieślowski,Screenplay
+360,Marin Karmitz,Producer
+361,Krzysztof Piesiewicz,Author
+362,Glenn R. Wilder,Stunts
+363,Dick Ziker,Stunts
+364,Brian De Palma,Director
+365,"Thomas Rosales, Jr.",Stunts
+366,Mario Roberts,Stunts
+367,John A. Alonzo,Director of Photography
+368,Giorgio Moroder,Original Music Composer
+369,Oliver Stone,Screenplay
+370,Patricia Norris,Costume Design
+371,Scott Wilder,Stunts
+372,Ib Tardini,Producer
+373,Lone Scherfig,Author
+374,Kim Ki-duk,Author
+375,James Newton Howard,Original Music Composer
+376,Garry Marshall,Director
+377,Raja Gosnell,Editor
+378,J. F. Lawton,Author
+379,Ethan Coen,Writer
+380,Carter Burwell,Original Music Composer
+381,Joel Coen,Director
+382,Tim Bevan,Executive Producer
+383,Eric Fellner,Executive Producer
+384,Lisa Mozden,Assistant Editor
+385,Woody Allen,Director
+386,Letty Aronson,Producer
+387,Jack Rollins,Co-Executive Producer
+388,Patricia Kerrigan DiCerto,Casting
+389,Art Linson,Producer
+390,Bill Pankow,Editor
+391,Ennio Morricone,Original Music Composer
+392,Eliot Ness,Novel
+393,David Mamet,Writer
+394,Graham Burke,Executive Producer
+395,Gabriella Pescucci,Costume Design
+396,John August,Screenplay
+397,Roald Dahl,Author
+398,Brad Grey,Producer
+399,Richard D. Zanuck,Producer
+400,Bruce Berman,Executive Producer
+401,Peter Jackson,Screenplay
+402,J.R.R. Tolkien,Novel
+403,Amy Hubbard,Casting
+404,Andrew Lesnie,Director of Photography
+405,Philippa Boyens,Screenplay
+406,Fran Walsh,Screenplay
+407,Saul Zaentz,Executive Producer
+408,Dan Hennah,Set Decoration
+409,Peter S. Beagle,Screenplay
+410,Ralph Bakshi,Director
+411,Toshio Suzuki,Producer
+412,Yoshifumi Kondô,Animation Supervisor
+413,Seiji Okuda,Executive Producer
+414,Nizou Yamamoto,Art Direction
+415,Kazuo Oga,Art Direction
+416,Albert Maysles,Director
+417,David Maysles,Director
+418,D.A. Pennebaker,Sound Recordist
+419,Philip Stockton,Dialogue Editor
+420,Bob Dylan,Original Music Composer
+421,Tod Browning,Director
+422,Harold Ramis,Producer
+423,C.O. Erickson,Executive Producer
+424,George Fenton,Original Music Composer
+425,Steve Boyum,Stunts
+426,Carl Laemmle Jr.,Producer
+427,Philip Glass,Original Music Composer
+428,Bram Stoker,Novel
+429,Anthony Dod Mantle,Director of Photography
+430,Søren Kragh-Jacobsen,Director
+431,Richard Kelly,Screenplay
+432,Mickey Giacomazzi,Stunt Coordinator
+433,Drew Barrymore,Executive Producer
+434,Ang Lee,Director
+435,James Schamus,Producer
+436,Larry McMurtry,Screenplay
+437,Maxwell Anderson,Writer
+438,Lewis Milestone,Director
+439,Erich Maria Remarque,Novel
+440,George Abbott,Screenplay
+441,Arthur Edeson,Director of Photography
+442,Edward L. Cahn,Editor
+443,Wim Wenders,Director
+444,Peter Handke,Author
+445,Job Gosschalk,Casting
+446,Peter Pau,Director of Photography
+447,François Truffaut,Producer
+448,Jean Constantin,Original Music Composer
+449,Walter Hill,Director
+450,Roger Spottiswoode,Author
+451,Steven E. de Souza,Author
+452,James Horner,Original Music Composer
+453,Gene Roddenberry,Producer
+454,Richard H. Kline,Director of Photography
+455,Jerry Goldsmith,Original Music Composer
+456,Sofia Coppola,Producer
+457,Spike Jonze,Thanks
+458,Wes Anderson,Thanks
+459,Josh Hartnett,Thanks
+460,Paul Simon,Thanks
+461,Roman Coppola,Thanks
+462,Lorne Michaels,Thanks
+463,Kelly Lynch,Thanks
+464,Mitch Glazer,Associate Producer
+465,Ross Katz,Producer
+466,Michael Minor,Art Direction
+467,Jack B. Sowards,Story
+468,Harve Bennett,Story
+469,Nicholas Meyer,Director
+470,Kevin Kaska,Orchestrator
+471,Lindy Hemming,Costume Design
+472,David S. Goyer,Story
+473,Bob Kane,Characters
+474,Lee Smith,Editor
+475,Michael Uslan,Executive Producer
+476,Nathan Crowley,Production Design
+477,Thomas Tull,Executive Producer
+478,Bill Finger,Characters
+479,Jerry Robinson,Characters
+480,Jim Wilkey,Stunts
+481,Brian Christensen,Stunts
+482,Jessie Graff,Stunts
+483,Leonard Nimoy,Director
+484,Til Schweiger,Producer
+485,André Hennicke,Producer
+486,Sönke Wortmann,Director
+487,Ralf König,Author
+488,Louis Lumière,Director
+489,George Clayton Johnson,Author
+490,Dawn Lunsford,Foley
+491,Steven Soderbergh,Director
+492,Jerry Weintraub,Producer
+493,Alicia Stevenson,Foley
+494,Al Cerullo,Pilot
+495,Gregory Jacobs,First Assistant Director
+496,Denise Di Novi,Producer
+497,Colleen Halsey,Editor
+498,Gary Ross,Thanks
+499,Felipe Savahge,Utility Stunts
+500,George Nolfi,Screenplay
+501,Edith Head,Costume Supervisor
+502,Blake Edwards,Director
+503,Truman Capote,Author
+504,Henry Mancini,Original Music Composer
+505,Claude Pinoteau,Author
+506,Danièle Thompson,Author
+507,Vladimir Cosma,Original Music Composer
+508,Iain Softley,Director
+509,Alan D. Purwin,Pilot
+510,Ronald Sinclair,ADR Editor
+511,Alex Garland,Screenplay
+512,Danny Boyle,Director
+513,Brian Eno,Musical
+514,Renaud,Original Music Composer
+515,William Shatner,Director
+516,Richard Fleischer,Director
+517,Jules Verne,Novel
+518,Walt Disney,Producer
+519,Paul J. Smith,Original Music Composer
+520,Harper Goff,Production Design
+521,Ralph Winter,Producer
+522,Leigh Whannell,Writer
+523,James Wan,Story
+524,Kevin Greutert,Editor
+525,Cindy Carr,Set Decoration
+526,Richard LaGravenese,Writer
+527,Steven Zaillian,Author
+528,Scott Frank,Author
+529,Anthony Minghella,Executive Producer
+530,Dianne Dreyer,Script Supervisor
+531,Kevin Misher,Producer
+532,Sydney Pollack,Executive Producer
+533,Ted Robbins,Unit Production Manager
+534,Sergio Mimica-Gezzan,First Assistant Director
+535,Jan de Bont,Producer
+536,Michael Doven,Associate Producer
+537,Brian Smrz,Stunt Coordinator
+538,Gerald R. Molen,Producer
+539,Jake Garber,Makeup Effects
+540,Paul Haslinger,Original Music Composer
+541,Paul Attanasio,Screenplay
+542,Shandra Beri,Set Costumer
+543,Todd Holland,Director
+544,Elmore Leonard,Novel
+545,Anthony Burgess,Novel
+546,Andreas Grosch,Producer
+547,Deborah Aquila,Casting
+548,Paul McGuigan,Director
+549,Frank Miller,Writer
+550,John Debney,Original Music Composer
+551,Mary Vernieu,Casting
+552,Jeffrey J. Dashnaw,Stunt Coordinator
+553,Joe Bucaro III,Utility Stunts
+554,Everett Burrell,Digital Effects Supervisor
+555,Elizabeth Avellan,Producer
+556,Rico Torres,Still Photographer
+557,Cynthia Streit,Production Coordinator
+558,Rebekah Del Rio,Additional Music
+559,Stefen Fangmeier,Visual Effects Supervisor
+560,Alexander Rodnyansky,Producer
+561,Umberto Eco,Writer
+562,Howard Franklin,Screenplay
+563,Tonino Delli Colli,Director of Photography
+564,Dante Ferretti,Production Design
+565,David Rubin,Casting
+566,Dominique Besnehard,Casting
+567,Jean-Jacques Annaud,Director
+568,Junie Lowry-Johnson,Casting
+569,Ron Surma,Casting
+570,Ronald D. Moore,Screenplay
+571,David Carson,Director
+572,Jean-Claude Lagniez,Stunts
+573,Bruno Delbonnel,Director of Photography
+574,Jean-Pierre Jeunet,Author
+575,Ernst Lubitsch,Producer
+576,Mel Gibson,Producer
+577,Randall Wallace,Screenplay
+578,Dean Lopata,Producer
+579,Mic Rodgers,Stunt Coordinator
+580,Melchior Lengyel,Author
+581,Alexander Korda,Producer
+582,Rudolph Maté,Director of Photography
+583,Brannon Braga,Screenplay
+584,Jonathan Frakes,Director
+585,Ludwig van Beethoven,Additional Soundtrack
+586,Patrick Stewart,Producer
+587,Stuart Baird,Director
+588,Eric Clapton,Original Music Composer
+589,Henri-Georges Clouzot,Screenplay
+590,Raymond Borderie,Producer
+591,Terry George,Screenplay
+592,Lionel Steketee,Assistant Director
+593,Peter Weir,Director
+594,John Seale,Director of Photography
+595,Maurice Jarre,Original Music Composer
+596,Jack Warner,Producer
+597,Robert Burks,Special Effects
+598,Frank Capra,Producer
+599,Byron Haskin,Special Effects
+600,George Tomasini,Editor
+601,Alfred Hitchcock,Producer
+602,Merrill Pye,Art Direction
+603,Darren Lynn Bousman,Director
+604,Stephanie Gorin,Casting
+605,Rainer Werner Fassbinder,Original Music Composer
+606,Bill Corso,Makeup Artist
+607,Marian Green,Stunts
+608,William Wisher Jr.,Dialogue
+609,Adam Greenberg,Director of Photography
+610,Harlan Ellison,Thanks
+611,John Daly,Executive Producer
+612,James Cameron,Director
+613,Gordon Daniel,Foley
+614,Elia Kazan,Producer
+615,Don Alvarado,Assistant Director
+616,John Steinbeck,Author
+617,Nicholas Ray,Author
+618,D. Ross Lederman,Second Unit
+619,George Barnes,Director of Photography
+620,Daphne Du Maurier,Novel
+621,Andrzej Wajda,Producer
+622,Billy Hopkins,Casting
+623,Kerry Barden,Casting
+624,Christine Vachon,Producer
+625,Kimberly Peirce,Director
+626,Suzanne Smith,Casting
+627,Josef von Sternberg,Author
+628,James Whale,Director
+629,George Clooney,Executive Producer
+630,Stephen Gaghan,Screenplay
+631,Georgia Kacandes,Producer
+632,Jennifer Fox,Producer
+633,Alexandre Desplat,Original Music Composer
+634,Lora Kennedy,Casting
+635,Robert Baer,Book
+636,Stewart Copeland,Original Music Composer
+637,Richard Price,Novel
+638,Martin Ransohoff,Producer
+639,Scott Rudin,Casting
+640,Giuseppe Becce,Original Music Composer
+641,Jane Jenkins,Casting
+642,Stephen King,Novel
+643,Rob Reiner,Director
+644,Jocelyn Moorhouse,Producer
+645,P.J. Hogan,Director
+646,Des Hamilton,Casting
+647,David Mackenzie,Director
+648,Jeremy Thomas,Producer
+649,David Byrne,Original Music Composer
+650,Mario Puzo,Screenplay
+651,Gordon Willis,Director of Photography
+652,Nino Rota,Original Music Composer
+653,Robert Evans,Executive Producer
+654,Paul Baxley,Stunt Coordinator
+655,Billy Wilder,Screenplay
+656,Joe Gray,Stunts
+657,Charles Lang,Director of Photography
+658,James Caan,Thanks
+659,Mario Cotone,Unit Manager
+660,Charles H. Schram,Makeup Artist
+661,Leonard Cohen,Original Music Composer
+662,Trent Reznor,Original Music Composer
+663,Buddy Joe Hooker,Stunt Coordinator
+664,John Cusack,Screenplay
+665,Scott Rosenberg,Screenplay
+666,Steve Pink,Screenplay
+667,Seamus McGarvey,Director of Photography
+668,Nick Hornby,Author
+669,Stephen Frears,Director
+670,Merian C. Cooper,Director
+671,Ernest B. Schoedsack,Producer
+672,Chris Weitz,Director
+673,Paul Weitz,Director
+674,Robert De Niro,Producer
+675,Peter Hedges,Screenplay
+676,Jane Rosenthal,Producer
+677,Takeshi Kitano,Screenplay
+678,Jim Thompson,Dialogue
+679,David Newman,Original Music Composer
+680,Danny DeVito,Director
+681,Howard W. Koch,Producer
+682,Jerry Zucker,Director
+683,Anthony Stacchi,Animation
+684,Charlie Picerni,Stunt Coordinator
+685,Mel Stuart,Director
+686,David L. Wolper,Producer
+687,Peter Lamont,Art Direction
+688,Stephen Hendrickson,Art Direction
+689,Paul McCartney,Songs
+690,George Martin,Original Music Composer
+691,Guy Hamilton,Director
+692,Tom Mankiewicz,Screenplay
+693,Ian Fleming,Novel
+694,Albert R. Broccoli,Producer
+695,Peter Swords King,Hair Designer
+696,Marcel Berbert,Producer
+697,Georges Delerue,Original Music Composer
+698,Anna B. Sheppard,Costume Design
+699,Roman Polanski,Director
+700,Charles Dickens,Novel
+701,Ronald Harwood,Screenplay
+702,Alain Sarde,Producer
+703,Pawel Edelman,Director of Photography
+704,Rachel Portman,Original Music Composer
+705,Néstor Almendros,Director of Photography
+706,Laurent Voulzy,Original Music Composer
+707,Marie-France Pisier,Author
+708,Michael Balcon,Producer
+709,John Buchan,Novel
+710,Richard Brooks,Director
+711,Tennessee Williams,Theatre Play
+712,Charles Wolcott,Original Music Composer
+713,Robbie Robertson,Original Music Composer
+714,Thelma Schoonmaker,Editor
+715,Michael Ballhaus,Director of Photography
+716,Jean-Luc Godard,Screenplay
+717,Carlo Ponti,Producer
+718,Raoul Coutard,Director of Photography
+719,Alberto Moravia,Novel
+720,Marion Dougherty,Casting
+721,Peter Guber,Producer
+722,Jon Peters,Producer
+723,Tage Danielsson,Director
+724,Astrid Lindgren,Author
+725,Ben Cooke,Stunts
+726,Paul Dini,Thanks
+727,Laura Albert,Stunts
+728,Bruce Timm,Thanks
+729,George P. Wilbur,Stunts
+730,Gary Goetzman,Executive Producer
+731,Kristi Zea,Production Design
+732,Kenneth Utt,Unit Production Manager
+733,Michael Cassidy,Stunts
+734,Jonathan Demme,Director
+735,Donna M. Belajac,Casting
+736,Andreas Wodraschke,Editor
+737,Len Wiseman,Director
+738,Danny McBride,Associate Producer
+739,Kevin Grevioux,Story
+740,Patrick Tatopoulos,Creature Design
+741,Jesse V. Johnson,Assistant Director
+742,Liz Glotzer,Executive Producer
+743,Frank Darabont,Writer
+744,Theodor Pištěk,Costume Design
+745,Patrizia von Brandenstein,Production Design
+746,Miloš Forman,Director
+747,Stan Winston,Makeup Effects
+748,Dennis Muren,Visual Effects
+749,Ed French,Makeup Artist
+750,Lilly Kilvert,Production Design
+751,Kathryn Bigelow,Director
+752,Debi Manwiller,Casting
+753,I. A. L. Diamond,Screenplay
+754,Joseph LaShelle,Director of Photography
+755,John Dixon,Stunts
+756,Stanley Kramer,Producer
+757,Fred Zinnemann,Director
+758,Carl Foreman,Executive Producer
+759,Regis Parton,Stunts
+760,Don Siegel,Other
+761,Michael Curtiz,Director
+762,Stacy Peralta,Director
+763,Dave Chappelle,Author
+764,Robert Redford,Director
+765,Mark Isham,Original Music Composer
+766,Richard Friedenberg,Screenplay
+767,Rosemary Brandenburg,Set Decoration
+768,Jonathan Mostow,Script Supervisor
+769,Shepherd Frankel,Art Direction
+770,Stephen Hunter Flick,Supervising Sound Editor
+771,Colin Strause,3D Supervisor
+772,Marco Beltrami,Original Music Composer
+773,Stephen G. Bishop,Hairstylist
+774,Kevin Wade,Screenplay
+775,Emmanuel Lubezki,Director of Photography
+776,David Levien,Screenplay
+777,Brian Koppelman,Screenplay
+778,Lona Vigi,Hairstylist
+779,Howard Hawks,Producer
+780,Yakima Canutt,Stunt Coordinator
+781,Russell Harlan,Director of Photography
+782,François Ozon,Screenplay
+783,Philippe Rombi,Original Music Composer
+784,Ted Tetzlaff,Director of Photography
+785,Ben Hecht,Screenplay
+786,John Landis,Director
+787,Nile Rodgers,Original Music Composer
+788,Mac Ahlberg,Director of Photography
+789,Federico Fellini,Screenplay
+790,Roberto Rossellini,Screenplay
+791,Jim Jarmusch,Director
+792,Frederick Elmes,Director of Photography
+793,Thomas Vinterberg,Screenplay
+794,Stacey Carino,Stand In
+795,Steve Oedekerk,Executive Producer
+796,Gary Barber,Executive Producer
+797,Jim Carrey,Producer
+798,Tom Shadyac,Director
+799,Dean Semler,Director of Photography
+800,Franco Ferrini,Screenplay
+801,Sergio Leone,Screenplay
+802,Benito Stefanelli,Stunts
+803,Caroline Link,Director
+804,Marc Evans,Director
+805,Steve Coogan,Executive Producer
+806,Pitof,Director
+807,Dawn Soler,Music Supervisor
+808,Junkie XL,Additional Music
+809,Rikki Gagne,Stunts
+810,Eve Meyer,Producer
+811,Russ Meyer,Editor
+812,Barbara Albert,Producer
+813,Jasmila Zbanic,Director
+814,Bono,Producer
+815,Roger Avary,Screenplay
+816,Samuel Hadida,Producer
+817,Ken Kirzinger,Stunt Coordinator
+818,FM Le Sieur,Original Music Composer
+819,Denise Robert,Producer
+820,Émile Gaudreault,Director
+821,Brian Helgeland,Author
+822,Dennis Lehane,Author
+823,Sebastian Gutierrez,Screenplay
+824,Mindy Marin,Casting
+825,David R. Ellis,Director
+826,Michael Crichton,Novel
+827,Mark A.Z. Dippé,Visual Effects Supervisor
+828,Victor Anderson,Propmaker
+829,Alexander Payne,Writer
+830,Joe Johnston,Director
+831,Nancy Foy,Casting
+832,David Kellogg,Director
+833,Zak Penn,Screenplay
+834,Paul Thomas Anderson,Director
+835,Fiona Apple,Additional Music
+836,Aimee Mann,Songs
+837,Dario Argento,Story
+838,Bernardo Bertolucci,Story
+839,Antonio Margheriti,Special Effects
+840,Michèle Pétin,Producer
+841,Eric-Emmanuel Schmitt,Novel
+842,Laurent Pétin,Producer
+843,Tom Waits,Songs
+844,Liev Schreiber,Screenplay
+845,Jonathan Safran Foer,Author
+846,Matthew Libatique,Director of Photography
+847,Nancy Bishop,Casting
+848,Marco Kreuzpaintner,Author
+849,Colin Higgins,Producer
+850,Lynn Stalmaster,Casting
+851,Hal Ashby,Director
+852,Peter Thorwarth,Director
+853,Christian Becker,Producer
+854,Arthur Schnitzler,Writer
+855,Leon Vitali,Casting
+856,Akira Kurosawa,Editor
+857,Masaru Satô,Music
+858,Robert Siodmak,Director
+859,Curt Siodmak,Screenplay
+860,H.R. Giger,Production Design
+861,Robert Guédiguian,Producer
+862,David Frankel,Director
+863,Patricia Field,Costume Design
+864,Theodore Shapiro,Original Music Composer
+865,Aline Brosh McKenna,Screenplay
+866,Fatih Akin,Producer
+867,Andreas Thiel,Producer
+868,Maceo Parker,Original Music Composer
+869,Mehmet Kurtulus,Producer
+870,Daniel Waters,Screenplay
+871,Wesley Strick,Screenplay
+872,Wes Craven,Director
+873,Robert Shaye,Producer
+874,Barry Sonnenfeld,Director of Photography
+875,Dashiell Hammett,Novel
+876,Mark Johnson,Producer
+877,Barry Levinson,Director
+878,Marshall Schlom,Script Supervisor
+879,Gus Van Sant,Producer
+880,Lothar G. Buchheim,Novel
+881,Wolfgang Petersen,Director
+882,Klaus Doldinger,Original Music Composer
+883,Jost Vacano,Director of Photography
+884,Spike Lee,Director
+885,Terence Blanchard,Original Music Composer
+886,Jonathan Filley,Unit Production Manager
+887,Kim Coleman,Casting
+888,Jeff Ward,Stunt Coordinator
+889,Reginald Rose,Screenplay
+890,Henry Fonda,Producer
+891,Sidney Lumet,Director
+892,João Canijo,Line Producer
+893,Paulo Branco,Producer
+894,Tonino Valerii,Assistant Director
+895,Mario Caiano,Assistant Director
+896,Lasse Hallström,Director
+897,Mark Cooper,Producer
+898,David Brown,Producer
+899,Sonny Chiba,Fight Choreographer
+900,Zoë Bell,Stunts
+901,Jaroslav Peterka,Stunts
+902,Andrew Jack,Dialect Coach
+903,Bharat Nalluri,Second Unit Cinematographer
+904,Irene Sharaff,Costume Design
+905,Mike Nichols,Director
+906,Herbert Ross,Choreographer
+907,Owen Roizman,Director of Photography
+908,Adam Brooks,Screenplay
+909,Meg Ryan,Producer
+910,Coreen Mayrs,Casting
+911,Bennett Miller,Director
+912,Dan Futterman,Screenplay
+913,Gary Fleder,Director
