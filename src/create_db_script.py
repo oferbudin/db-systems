@@ -164,7 +164,7 @@ db.add_table(
 )
 db.add_table(
     Table(
-        "revenue",
+        "revenues",
         'films.csv',
         [
             Column("movie_id", "INT", key="id"),

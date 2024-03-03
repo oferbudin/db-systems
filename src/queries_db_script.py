@@ -53,6 +53,21 @@ def query_3(cursor):
     for row in result:
         print(row)
     
+def query_4(cursor):
+    # This query returns the actor who has been in the most movies.
+    cursor.execute("""
+                   SELECT a.name AS actor_name, m.title AS movie_title, AVG(r.revenue) AS average_revenue
+                    FROM actors a
+                    JOIN actor_movies am ON a.id = am.actor_id
+                    JOIN revenues r ON am.movie_id = r.movie_id
+                    JOIN movies m ON am.movie_id = m.id
+                    GROUP BY a.name, m.title
+                    HAVING count(m.title) > 1
+                    order by AVG(r.revenue) desc
+                """)
+    result = cursor.fetchall()
+    for row in result:
+        print(row)
 
 if __name__ == "__main__":
     mydb = mysql.connector.connect(
@@ -63,5 +78,5 @@ if __name__ == "__main__":
         port=PORT
     )
     cursor = mydb.cursor()
-    
-    example_all_movies(cursor)
+
+    query_4(cursor)
