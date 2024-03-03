@@ -104,8 +104,7 @@ db.add_table(
         ],
         primary_keys = ["id"],
         indexes=[
-            #"ALTER TABLE movies ADD FULLTEXT idx_fulltext_title (title)"
-            #"ALTER TABLE movies ADD FULLTEXT idx_overview (overview)"
+            #"ALTER TABLE movies ADD FULLTEXT idx_title_overview (title, overview)"
             #"CREATE INDEX idx_genre ON movies (genre)",
             #"CREATE INDEX idx_runtime ON movies (runtime)",
             #"CREATE INDEX idx_title ON movies (title)"
@@ -120,6 +119,10 @@ db.add_table(
         [
             Column("id", "INT "),
             Column("name", "VARCHAR(255)"),
+        ],
+        primary_keys= ["id"],
+        indexes= [
+            #"ALTER TABLE actors ADD FULLTEXT idx_actors_name (name)"
         ]
     )
 )
