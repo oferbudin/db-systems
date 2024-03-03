@@ -4,10 +4,10 @@ from datetime import datetime
 
 
 HOST = "localhost"
-USER = "oferbudin"
-PASSWORD = "ofe6287"
-DATABASE = "oferbudin"
-PORT = 3305
+USER = "dbeaver"
+PASSWORD = "dbeaver"
+DATABASE = "project"
+PORT = 3306
 
 def load_data(data_file_name):
     return pd.read_csv(data_file_name)
