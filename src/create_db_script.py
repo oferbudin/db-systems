@@ -3,7 +3,7 @@ import mysql.connector
 from datetime import datetime
 
 
-HOST = "localhost"
+HOST = "192.168.1.217"
 USER = "dbeaver"
 PASSWORD = "dbeaver"
 DATABASE = "project"
@@ -28,12 +28,13 @@ class ForeignKey:
         
 
 class Table:
-    def __init__(self, name: str, csv_path, columns: list[Column], primary_kies = None, foreign_keys: list[ForeignKey] = None):
+    def __init__(self, name: str, csv_path, columns: list[Column], primary_keys = None, foreign_keys: list[ForeignKey] = None, indexes: list[str] = None):
         self.name = name
         self.columns = columns
         self.data_file_path = csv_path
-        self.primary_kies = primary_kies
+        self.primary_keys = primary_keys
         self.foreign_keys = foreign_keys
+        self.indexes = indexes 
 
     
     def get_records(self, data_file_path: str):
@@ -51,14 +52,19 @@ class Table:
         for column in self.columns:
             cmd += f"{column.name} {column.type},"
         cmd = cmd[:-1]
-        if self.primary_kies:
-            cmd += f",PRIMARY KEY ({','.join(self.primary_kies)}),"
+        if self.primary_keys:
+            cmd += f",PRIMARY KEY ({','.join(self.primary_keys)}),"
             cmd = cmd[:-1]
         if self.foreign_keys:
             for foreign_key in self.foreign_keys:
                 cmd += f",FOREIGN KEY ({foreign_key.column_name}) REFERENCES {foreign_key.table}({foreign_key.foreign_column_name})"
         cmd += ")"
         cursor.execute(cmd)
+        #index creation commands
+        if self.indexes:
+            for index in self.indexes:
+                cursor.execute(index)
+
 
 class DB:
     def __init__(self):
@@ -80,7 +86,7 @@ db.add_table(
             Column("id", "INT"),
             Column("name", "VARCHAR(255)")
         ],
-        primary_kies = ["id"]
+        primary_keys = ["id"]
     )
 )
 db.add_table(
@@ -96,7 +102,14 @@ db.add_table(
             Column("original_language", "VARCHAR(255)"),
             Column("genre", "INT"),
         ],
-        primary_kies = ["id"],
+        primary_keys = ["id"],
+        indexes=[
+            #"ALTER TABLE movies ADD FULLTEXT idx_fulltext_title (title)"
+            #"ALTER TABLE movies ADD FULLTEXT idx_overview (overview)"
+            #"CREATE INDEX idx_genre ON movies (genre)",
+            #"CREATE INDEX idx_runtime ON movies (runtime)",
+            #"CREATE INDEX idx_title ON movies (title)"
+        ]
         # foreign_keys = [ForeignKey("genres", "id")]
     )
 )
@@ -118,7 +131,10 @@ db.add_table(
             Column("movie_id", "INT"),
             Column("actor_id", "INT"),
         ],
-        primary_kies = ["movie_id", "actor_id"],
+        primary_keys = ["movie_id", "actor_id"],
+        indexes=[
+            #"CREATE INDEX idx_actor_movies_actor_id_movie_id ON actor_movies (actor_id, movie_id)"
+        ]
         # foreign_keys = [ForeignKey("movies", "movie_id", "id"), ForeignKey("actors", "actor_id", "id")]
         # foreign_keys = [ForeignKey("movies", "movie_id", "id")]
 
@@ -133,7 +149,7 @@ db.add_table(
             Column("name", "VARCHAR(255)"),
             Column("job", "VARCHAR(255)"),
         ],
-        primary_kies = ["id"]
+        primary_keys = ["id"]
     )
 )
 db.add_table(
@@ -144,7 +160,7 @@ db.add_table(
             Column("movie_id", "INT"),
             Column("crew_id", "INT"),
         ],
-        primary_kies = ["movie_id", "crew_id"],
+        primary_keys = ["movie_id", "crew_id"],
         # foreign_keys = [ForeignKey("movies", "movie_id", "id"), ForeignKey("crew_members", "crew_id", "id")]
     )
 )
@@ -158,7 +174,7 @@ db.add_table(
             Column("vote_average", "FLOAT"),
             Column("vote_count", "INT"),
         ],
-        primary_kies=["movie_id"],
+        primary_keys=["movie_id"],
         # foreign_keys = [ForeignKey("movies", "movie_id", "id")]
     )
 )
@@ -171,7 +187,7 @@ db.add_table(
             Column("budget", "INT"),
             Column("revenue", "INT"),
         ],
-        primary_kies=["movie_id"],
+        primary_keys=["movie_id"],
     )
 )
 
