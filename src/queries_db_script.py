@@ -2,7 +2,17 @@ from create_db_script import db, HOST, USER, PASSWORD, DATABASE, PORT
 import mysql.connector
 
 
-def query_1(cursor):
+mydb = mysql.connector.connect(
+        host=HOST,
+        user=USER,
+        password=PASSWORD,
+        database=DATABASE,
+        port=PORT
+    )
+cursor = mydb.cursor()
+
+
+def query_1():
     """
     This query calculates the average revenue earned by each actor from the movies they've been in.
     """
@@ -10,7 +20,7 @@ def query_1(cursor):
                     SELECT a.name, AVG(r.revenue) AS average_revenue
                     FROM actors a
                     JOIN actor_movies am ON a.id = am.actor_id
-                    JOIN revenue r ON am.movie_id = r.movie_id
+                    JOIN revenues r ON am.movie_id = r.movie_id
                     WHERE r.revenue IS NOT NULL
                     GROUP BY a.name
                     ORDER BY average_revenue DESC;
@@ -18,7 +28,7 @@ def query_1(cursor):
     result = cursor.fetchall()
     return result
 
-def query_2(cursor, genre):
+def query_2(genre):
     """
     This query finds the average movie runtime that corresponds to the highest average vote for a specific genre.
     """
@@ -51,7 +61,7 @@ def query_3(cursor):
     result = cursor.fetchall()
     return result
     
-def query_4(cursor):
+def query_4():
     """
     This query returns the actor who has the highest average revenue from the movies they've been in.
     only if they've been in more than one movie.
@@ -69,7 +79,7 @@ def query_4(cursor):
     result = cursor.fetchall()
     return result
 
-def query_5(cursor, genre):
+def query_5(genre):
     """
     This query returns the actress who has the highest average rating in a specific genre.
     """
@@ -89,7 +99,7 @@ def query_5(cursor, genre):
     result = cursor.fetchall()
     return result
 
-def query_6(cursor):
+def query_6():
     """
     This query is a util, it returns the names of all the genres in the database.
     """
@@ -102,7 +112,7 @@ def query_6(cursor):
         print(res)
     return result
 
-def query_7(curser, search):
+def query_7(search):
     """
     This query returns the movie id, title and overview of the movies that thier title or overview match the search term.
     """
@@ -111,11 +121,11 @@ def query_7(curser, search):
         FROM movies
         WHERE MATCH(title, overview) AGAINST (%s IN NATURAL LANGUAGE MODE);
     """
-    curser.execute(query, (search,))
+    cursor.execute(query, (search,))
     result = cursor.fetchall()
     return result
 
-def query_8(cursor, actor_name):
+def query_8(actor_name):
     """
     This query returns the actor's name, the movie title that actor_name is in the actor name
     """
@@ -129,14 +139,3 @@ def query_8(cursor, actor_name):
     cursor.execute(query, (actor_name,))
     result = cursor.fetchall()
     return result
-
-if __name__ == "__main__":
-    mydb = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        password=PASSWORD,
-        database=DATABASE,
-        port=PORT
-    )
-    cursor = mydb.cursor()
-    
