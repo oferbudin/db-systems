@@ -183,7 +183,7 @@ db.add_table(
 )
 db.add_table(
     Table(
-        "revenue",
+        "revenues",
         'films.csv',
         [
             Column("movie_id", "INT", key="id"),
@@ -194,7 +194,7 @@ db.add_table(
     )
 )
 
-if __name__ == "__main__":
+def main():
     mydb = mysql.connector.connect(
         host=HOST,
         user=USER,
@@ -206,3 +206,8 @@ if __name__ == "__main__":
 
     for table in db.get_tables():
         table.cretae_table_command(cursor)
+
+
+
+if __name__ == "__main__":
+   main()
