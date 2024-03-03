@@ -103,13 +103,13 @@ db.add_table(
             Column("genre", "INT"),
         ],
         primary_keys = ["id"],
+        foreign_keys = [ForeignKey("genres", "id", "id")],
         indexes=[
-            #"ALTER TABLE movies ADD FULLTEXT idx_title_overview (title, overview)"
-            #"CREATE INDEX idx_genre ON movies (genre)",
-            #"CREATE INDEX idx_runtime ON movies (runtime)",
-            #"CREATE INDEX idx_title ON movies (title)"
+            "CREATE FULLTEXT INDEX idx_title_overview ON movies(title, overview)",
+            "CREATE INDEX idx_genre ON movies (genre)",
+            "CREATE INDEX idx_runtime ON movies (runtime)",
+            "CREATE INDEX idx_title ON movies (title)"
         ]
-        # foreign_keys = [ForeignKey("genres", "id")]
     )
 )
 db.add_table(
@@ -122,7 +122,7 @@ db.add_table(
         ],
         primary_keys= ["id"],
         indexes= [
-            #"ALTER TABLE actors ADD FULLTEXT idx_actors_name (name)"
+            "CREATE FULLTEXT INDEX idx_actors_name ON actors(name)"
         ]
     )
 )
@@ -135,12 +135,13 @@ db.add_table(
             Column("actor_id", "INT"),
         ],
         primary_keys = ["movie_id", "actor_id"],
+        foreign_keys=[
+            ForeignKey("movies", "movie_id", "id"),
+            ForeignKey("actors", "actor_id", "id")
+        ],
         indexes=[
-            #"CREATE INDEX idx_actor_movies_actor_id_movie_id ON actor_movies (actor_id, movie_id)"
+            "CREATE INDEX idx_actor_movies_actor_id_movie_id ON actor_movies (actor_id, movie_id)"
         ]
-        # foreign_keys = [ForeignKey("movies", "movie_id", "id"), ForeignKey("actors", "actor_id", "id")]
-        # foreign_keys = [ForeignKey("movies", "movie_id", "id")]
-
     )
 )
 db.add_table(
@@ -164,7 +165,10 @@ db.add_table(
             Column("crew_id", "INT"),
         ],
         primary_keys = ["movie_id", "crew_id"],
-        # foreign_keys = [ForeignKey("movies", "movie_id", "id"), ForeignKey("crew_members", "crew_id", "id")]
+        foreign_keys=[
+            ForeignKey("movies", "movie_id", "id"),
+            ForeignKey("crew_members", "crew_id", "id")
+        ]
     )
 )
 db.add_table(
@@ -178,7 +182,7 @@ db.add_table(
             Column("vote_count", "INT"),
         ],
         primary_keys=["movie_id"],
-        # foreign_keys = [ForeignKey("movies", "movie_id", "id")]
+        foreign_keys = [ForeignKey("movies", "movie_id", "id")]
     )
 )
 db.add_table(
@@ -191,6 +195,7 @@ db.add_table(
             Column("revenue", "INT"),
         ],
         primary_keys=["movie_id"],
+        foreign_keys = [ForeignKey("movies", "movie_id", "id")]
     )
 )
 
