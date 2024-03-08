@@ -4,16 +4,25 @@ import mysql.connector
 from datetime import datetime
 
 
+def load_data(data_file_name):
+    return pd.read_csv(data_file_name)
+
+def get_user_password():
+    path = os.path.join('DOCUMENTATION', 'mysql_and_user_password.txt')
+    if not os.path.exists(path):
+        path = os.path.join('..', 'DOCUMENTATION', 'mysql_and_user_password.txt')
+    data = load_data(path)
+    return data['username'][0], data['password'][0]
+
+user, password = get_user_password()
+
 HOST = "127.0.0.1"
-USER = "oferbudin"
-PASSWORD = "ofe6287"
+USER = user
+PASSWORD = password
 DATABASE = "oferbudin"
 PORT = 3305
 
 print(f'You are using {DATABASE} database | Host: {HOST} | Port: {PORT}')
-
-def load_data(data_file_name):
-    return pd.read_csv(data_file_name)
 
 class Column:
     def __init__(self, name: str, _type: str, converter_funtion = None, key: str = ''):
@@ -113,6 +122,11 @@ db.add_table(
             Column("runtime", "INT"),
             Column("original_language", "VARCHAR(255)"),
             Column("genre", "INT"),
+            Column("budget", "INT"),
+            Column("revenue", "INT"),
+            Column("popularity", "FLOAT"),
+            Column("vote_average", "FLOAT"),
+            Column("vote_count", "INT"),
         ],
         primary_keys = ["id"],
         foreign_keys = [ForeignKey("genres", "genre", "id")],
@@ -181,33 +195,6 @@ db.add_table(
             ForeignKey("movies", "movie_id", "id"),
             ForeignKey("crew_members", "crew_id", "id")
         ]
-    )
-)
-db.add_table(
-    Table(
-        "ratings",
-        'films.csv',
-        [
-            Column("movie_id", "INT", key="id"),
-            Column("popularity", "FLOAT"),
-            Column("vote_average", "FLOAT"),
-            Column("vote_count", "INT"),
-        ],
-        primary_keys=["movie_id"],
-        foreign_keys = [ForeignKey("movies", "movie_id", "id")]
-    )
-)
-db.add_table(
-    Table(
-        "revenues",
-        'films.csv',
-        [
-            Column("movie_id", "INT", key="id"),
-            Column("budget", "INT"),
-            Column("revenue", "INT"),
-        ],
-        primary_keys=["movie_id"],
-        foreign_keys = [ForeignKey("movies", "movie_id", "id")],
     )
 )
 

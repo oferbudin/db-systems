@@ -17,11 +17,11 @@ def query_1():
     This query calculates the average revenue earned by each actor from the movies they've been in.
     """
     cursor.execute("""
-                    SELECT a.name, AVG(r.revenue) AS average_revenue
+                    SELECT a.name, AVG(m.revenue) AS average_revenue
                     FROM actors a
                     JOIN actor_movies am ON a.id = am.actor_id
-                    JOIN revenues r ON am.movie_id = r.movie_id
-                    WHERE r.revenue IS NOT NULL
+                    JOIN movies m ON am.movie_id = m.id
+                    WHERE m.revenue IS NOT NULL
                     GROUP BY a.name
                     ORDER BY average_revenue DESC;
                    """)
@@ -35,11 +35,10 @@ def query_2(genre):
     cursor.execute("""
                     SELECT AVG(m.runtime) AS ideal_runtime
                     FROM movies m
-                    JOIN ratings r ON m.id = r.movie_id
                     JOIN genres g ON m.genre = g.id
                     WHERE g.name = %s
                     GROUP BY g.id
-                    ORDER BY AVG(r.vote_average) DESC
+                    ORDER BY AVG(m.vote_average) DESC
                     LIMIT 1;
                    """, (genre,))
     result = cursor.fetchall()
@@ -50,13 +49,12 @@ def query_3():
     This query returns the director whose film got the highest revenue whilst having a budget lower than average.
     """
     cursor.execute("""
-                    SELECT DISTINCT cm.name AS director, m.title, r.revenue, r.budget
+                    SELECT DISTINCT cm.name AS director, m.title, m.revenue, m.budget
                     FROM movies m
                     JOIN crew_members_movies cmm ON m.id = cmm.movie_id
                     JOIN crew_members cm ON cmm.crew_id = cm.id
-                    JOIN revenues r ON m.id = r.movie_id
-                    WHERE r.budget < (SELECT AVG(budget) FROM revenues) and cm.job = 'director'    
-                    order by r.revenue desc
+                    WHERE m.budget < (SELECT AVG(budget) FROM movies) and cm.job = 'director'    
+                    order by m.revenue desc
                    """)
     result = cursor.fetchall()
     return result
@@ -67,14 +65,14 @@ def query_4():
     only if they've been in more than one movie.
     """
     cursor.execute("""
-                   SELECT a.name AS actor_name, m.title AS movie_title, AVG(r.revenue) AS average_revenue
+                   SELECT a.name AS actor_name, AVG(m.revenue) AS average_revenue
                     FROM actors a
                     JOIN actor_movies am ON a.id = am.actor_id
-                    JOIN revenues r ON am.movie_id = r.movie_id
                     JOIN movies m ON am.movie_id = m.id
                     GROUP BY a.name, m.title
                     HAVING count(m.title) > 1
-                    order by AVG(r.revenue) desc
+                    order by AVG(m.revenue) desc
+                    limit 1;
                 """)
     result = cursor.fetchall()
     return result
@@ -84,15 +82,14 @@ def query_5(genre):
     This query returns the actress who has the highest average rating in a specific genre.
     """
     query = """
-        SELECT a.name AS actress_name, AVG(r.vote_average) AS average_rating
+        SELECT a.name AS actress_name, AVG(m.vote_average) AS average_rating
         FROM actors a
         JOIN actor_movies am ON a.id = am.actor_id
         JOIN movies m ON am.movie_id = m.id
         JOIN genres g ON m.genre = g.id
-        JOIN ratings r ON m.id = r.movie_id
         WHERE g.name = %s
         GROUP BY a.name
-        ORDER BY AVG(r.vote_average) DESC
+        ORDER BY AVG(m.vote_average) DESC
         LIMIT 1;
     """
     cursor.execute(query, (genre,))
