@@ -1,13 +1,16 @@
+import os
 import pandas as pd
 import mysql.connector
 from datetime import datetime
 
 
-HOST = "192.168.1.217"
-USER = "dbeaver"
-PASSWORD = "dbeaver"
-DATABASE = "project"
-PORT = 3306
+HOST = "127.0.0.1"
+USER = "oferbudin"
+PASSWORD = "ofe6287"
+DATABASE = "oferbudin"
+PORT = 3305
+
+print(f'You are using {DATABASE} database | Host: {HOST} | Port: {PORT}')
 
 def load_data(data_file_name):
     return pd.read_csv(data_file_name)
@@ -31,7 +34,7 @@ class Table:
     def __init__(self, name: str, csv_path, columns: list[Column], primary_keys = None, foreign_keys: list[ForeignKey] = None, indexes: list[str] = None):
         self.name = name
         self.columns = columns
-        self.data_file_path = csv_path
+        self.data_file_path = os.path.join('data', csv_path)
         self.primary_keys = primary_keys
         self.foreign_keys = foreign_keys
         self.indexes = indexes 
