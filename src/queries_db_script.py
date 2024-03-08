@@ -39,14 +39,20 @@ def query_2(genre):
     This query finds the average movie runtime that corresponds to the highest average vote for a specific genre.
     """
     cursor.execute("""
-                    SELECT AVG(m.runtime) AS ideal_runtime
+                  WITH GenreStats AS (
+                    SELECT g.name AS genre_name,
+                        AVG(m.runtime) AS ideal_runtime,
+                        AVG(m.vote_average) AS avg_vote_avg
                     FROM movies m
                     JOIN genres g ON m.genre = g.id
-                    WHERE g.name = %s
-                    GROUP BY g.id
-                    ORDER BY AVG(m.vote_average) DESC
-                    LIMIT 1;
-                   """, (genre,))
+                    Where g.name = %s
+                    GROUP BY g.name
+                ) SELECT ideal_runtime
+                FROM GenreStats g
+                WHERE avg_vote_avg = (
+                    SELECT MAX(avg_vote_avg) FROM GenreStats
+                );
+    """, (genre,))
     result = cursor.fetchall()
     return result
 
