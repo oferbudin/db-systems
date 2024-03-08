@@ -53,7 +53,7 @@ def query_2(genre):
                                         SELECT MAX(avg_vote_avg) FROM GenreStats
                                     );
                                     """
-    cursor.execute(get_optimal_runtime_for_genre, (genre))
+    cursor.execute(get_optimal_runtime_for_genre, (genre, ))
     optimal_runtime_for_genre = cursor.fetchall()
     return optimal_runtime_for_genre
 
@@ -153,7 +153,7 @@ def query_7(search):
             FROM movies
             WHERE MATCH(title, overview) AGAINST (%s IN NATURAL LANGUAGE MODE);
             """
-    cursor.execute(get_fitting_titles_and_overview, (search))
+    cursor.execute(get_fitting_titles_and_overview, (search,))
     fitting_titles_and_overview = cursor.fetchall()
     return fitting_titles_and_overview
 
