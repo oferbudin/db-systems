@@ -17,17 +17,26 @@ def insert_recordsto_db(table, mydb, cursor, verbose = False):
         mydb.commit()
 
 def main(verbose = False):
-    mydb = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        password=PASSWORD,
-        database=DATABASE,
-        port=PORT
-    )
-    cursor = mydb.cursor()
-
-    for table in db.tables:
-        insert_recordsto_db(table, mydb, cursor, verbose)
+    try:
+        mydb = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
+            database=DATABASE,
+            port=PORT
+        )
+        cursor = mydb.cursor()
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't connect to MySQL server due to wrong user or password or database name" % e)
+    except mysql.connector.errors.InterfaceError:
+        print("Error: Can't connect to MySQL server due to worng port number or address")
+    
+    try:
+        for table in db.tables:
+            insert_recordsto_db(table, mydb, cursor, verbose)
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't insert records due to invalid command: %s" % e)
+    
 
 if __name__ == "__main__":
     main()

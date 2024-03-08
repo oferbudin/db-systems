@@ -89,21 +89,37 @@ def query_5(genre):
     Only if the genre has more than 5 movies.
     """
     query = """
-        SELECT a.name AS actress_name, AVG(m.vote_average) AS average_rating
+       SELECT a.name AS actress_name, AVG(m.vote_average) AS average_rating
         FROM actors a
         JOIN actor_movies am ON a.id = am.actor_id
         JOIN movies m ON am.movie_id = m.id
         JOIN genres g ON m.genre = g.id
         WHERE g.name = %s
         AND (
-            select count(*) from movies m
-            where m.genre = g.id
+            SELECT COUNT(*)
+            FROM movies
+            WHERE genre = g.id
         ) > 5
         GROUP BY a.name
-        ORDER BY AVG(m.vote_average) DESC
-        LIMIT 1;
+        HAVING AVG(m.vote_average) = (
+            SELECT MAX(avg_vote_average)
+            FROM (
+                SELECT AVG(m2.vote_average) AS avg_vote_average
+                FROM actors a2
+                JOIN actor_movies am2 ON a2.id = am2.actor_id
+                JOIN movies m2 ON am2.movie_id = m2.id
+                JOIN genres g2 ON m2.genre = g2.id
+                WHERE g2.name = %s
+                AND (
+                    SELECT COUNT(*)
+                    FROM movies
+                    WHERE genre = g2.id
+                ) > 5
+                GROUP BY a2.name
+            ) AS max_avg_vote_subquery
+        );
     """
-    cursor.execute(query, (genre,))
+    cursor.execute(query, (genre, genre))
     result = cursor.fetchall()
     return result
 

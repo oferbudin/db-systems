@@ -50,6 +50,8 @@ class Table:
 
     
     def get_records(self, data_file_path: str):
+        if not os.path.exists(data_file_path):
+            data_file_path = os.path.join('src', data_file_path)
         data = load_data(data_file_path)
         records = []
         for column in self.columns:
@@ -199,31 +201,49 @@ db.add_table(
 )
 
 def main(verbose = False):
-    mydb = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        password=PASSWORD,
-        database=DATABASE,
-        port=PORT
-    )
-    cursor = mydb.cursor()
+    try:
+        mydb = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
+            database=DATABASE,
+            port=PORT
+        )
+        cursor = mydb.cursor()
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't connect to MySQL server due to wrong user or password or database name" % e)
+    except mysql.connector.errors.InterfaceError:
+        print("Error: Can't connect to MySQL server due to worng port number or address")
 
-    for table in db.get_tables():
-        table.set_verbose(verbose)
-        table.cretae_table_command(cursor)
+    try:
+        for table in db.get_tables():
+            table.set_verbose(verbose)
+            table.cretae_table_command(cursor)
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't create table due to invalid command: %s" % e)
+    
 
 
 def drop_tables():
-    mydb = mysql.connector.connect(
-        host=HOST,
-        user=USER,
-        password=PASSWORD,
-        database=DATABASE,
-        port=PORT
-    )
-    cursor = mydb.cursor()
-    for table in reversed(db.get_tables()):
-        table.drop_table(cursor)
+    try:
+        mydb = mysql.connector.connect(
+            host=HOST,
+            user=USER,
+            password=PASSWORD,
+            database=DATABASE,
+            port=PORT
+        )
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't connect to MySQL server due to wrong user or password or database name" % e)
+    except mysql.connector.errors.InterfaceError:
+        print("Error: Can't connect to MySQL server due to worng port number or address")
+    
+    try:
+        cursor = mydb.cursor()
+        for table in reversed(db.get_tables()):
+            table.drop_table(cursor)
+    except mysql.connector.errors.ProgrammingError as e:
+        print("Error: Can't drop table due to invalid command: %s" % e)
 
 if __name__ == "__main__":
    main()
