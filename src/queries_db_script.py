@@ -86,6 +86,7 @@ def query_4():
 def query_5(genre):
     """
     This query returns the actress who has the highest average rating in a specific genre.
+    Only if the genre has more than 5 movies.
     """
     query = """
         SELECT a.name AS actress_name, AVG(m.vote_average) AS average_rating
@@ -94,6 +95,10 @@ def query_5(genre):
         JOIN movies m ON am.movie_id = m.id
         JOIN genres g ON m.genre = g.id
         WHERE g.name = %s
+        AND (
+            select count(*) from movies m
+            where m.genre = g.id
+        ) > 5
         GROUP BY a.name
         ORDER BY AVG(m.vote_average) DESC
         LIMIT 1;
