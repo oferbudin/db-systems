@@ -135,6 +135,7 @@ db.add_table(
         indexes=[
             "ALTER TABLE movies ADD Index (genre);",
             "ALTER TABLE movies ADD Index (runtime);",
+            "ALTER TABLE movies ADD Index (vote_average);",
             "ALTER TABLE movies ADD Index (title);",
             "ALTER TABLE movies ADD FULLTEXT (title, overview);"
         ]
@@ -181,7 +182,10 @@ db.add_table(
             Column("name", "VARCHAR(255)"),
             Column("job", "VARCHAR(255)"),
         ],
-        primary_keys = ["id"]
+        primary_keys = ["id"],
+        indexes=[
+            "ALTER TABLE crew_members ADD Index (job);"
+        ]
     )
 )
 db.add_table(
@@ -247,3 +251,4 @@ def drop_tables():
 
 if __name__ == "__main__":
    main()
+
