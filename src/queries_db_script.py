@@ -15,6 +15,7 @@ cursor = mydb.cursor()
 def query_1():
     """
     This query calculates the average revenue earned by each actor from the movies they've been in.
+    Only for movies that have a Second Film Editor in the crew.
     """
     cursor.execute("""
                     SELECT a.name, AVG(m.revenue) AS average_revenue
@@ -22,6 +23,11 @@ def query_1():
                     JOIN actor_movies am ON a.id = am.actor_id
                     JOIN movies m ON am.movie_id = m.id
                     WHERE m.revenue IS NOT NULL
+                    AND EXISTS (
+                        select * from crew_members cm 
+                        join crew_members_movies cmm on cm.id = cmm.crew_id and cmm.movie_id = m.id
+                        where cm.job = 'Second Film Editor'
+                    )
                     GROUP BY a.name
                     ORDER BY average_revenue DESC;
                    """)
