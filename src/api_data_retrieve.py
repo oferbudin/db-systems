@@ -1,7 +1,7 @@
 from create_db_script import db, HOST, USER, PASSWORD, DATABASE, PORT
 import mysql.connector
 
-def insert_recordsto_db(table, mydb, cursor):
+def insert_recordsto_db(table, mydb, cursor, verbose = False):
         cmd = f"INSERT INTO {table.name} ("
         for column in table.columns:
             cmd += f"{column.name},"
@@ -11,10 +11,12 @@ def insert_recordsto_db(table, mydb, cursor):
             cmd += "%s,"
         cmd = cmd[:-1]
         cmd += ")"
+        if verbose:
+            print(cmd)
         cursor.executemany(cmd, table.get_records(table.data_file_path).values.tolist())
         mydb.commit()
 
-def main():
+def main(verbose = False):
     mydb = mysql.connector.connect(
         host=HOST,
         user=USER,
@@ -25,7 +27,7 @@ def main():
     cursor = mydb.cursor()
 
     for table in db.tables:
-        insert_recordsto_db(table, mydb, cursor)
+        insert_recordsto_db(table, mydb, cursor, verbose)
 
 if __name__ == "__main__":
     main()

@@ -59,12 +59,21 @@ class Table:
             for foreign_key in self.foreign_keys:
                 cmd += f",FOREIGN KEY ({foreign_key.column_name}) REFERENCES {foreign_key.table}({foreign_key.foreign_column_name})"
         cmd += ")"
+        if self.verbose:
+            print(cmd)
         cursor.execute(cmd)
         #index creation commands
         if self.indexes:
             for index in self.indexes:
+                if self.verbose:
+                    print(index)
                 cursor.execute(index)
-
+    
+    def set_verbose(self, verbose: bool):
+        self.verbose = verbose
+    
+    def drop_table(self, cursor):
+        cursor.execute(f"DROP TABLE IF EXISTS {self.name}")
 
 class DB:
     def __init__(self):
@@ -103,12 +112,12 @@ db.add_table(
             Column("genre", "INT"),
         ],
         primary_keys = ["id"],
-        foreign_keys = [ForeignKey("genres", "id", "id")],
+        foreign_keys = [ForeignKey("genres", "genre", "id")],
         indexes=[
-            "CREATE FULLTEXT INDEX idx_title_overview ON movies(title, overview)",
-            "CREATE INDEX idx_genre ON movies (genre)",
-            "CREATE INDEX idx_runtime ON movies (runtime)",
-            "CREATE INDEX idx_title ON movies (title)"
+            "ALTER TABLE movies ADD Index (genre);",
+            "ALTER TABLE movies ADD Index (runtime);",
+            "ALTER TABLE movies ADD Index (title);",
+            "ALTER TABLE movies ADD FULLTEXT (title, overview);"
         ]
     )
 )
@@ -121,8 +130,8 @@ db.add_table(
             Column("name", "VARCHAR(255)"),
         ],
         primary_keys= ["id"],
-        indexes= [
-            "CREATE FULLTEXT INDEX idx_actors_name ON actors(name)"
+        indexes=[
+            "ALTER TABLE actors ADD FULLTEXT(name);"
         ]
     )
 )
@@ -138,9 +147,9 @@ db.add_table(
         foreign_keys=[
             ForeignKey("movies", "movie_id", "id"),
             ForeignKey("actors", "actor_id", "id")
-        ],
+        ], 
         indexes=[
-            "CREATE INDEX idx_actor_movies_actor_id_movie_id ON actor_movies (actor_id, movie_id)"
+            "ALTER TABLE actor_movies ADD Index (actor_id, movie_id);",
         ]
     )
 )
@@ -195,11 +204,11 @@ db.add_table(
             Column("revenue", "INT"),
         ],
         primary_keys=["movie_id"],
-        foreign_keys = [ForeignKey("movies", "movie_id", "id")]
+        foreign_keys = [ForeignKey("movies", "movie_id", "id")],
     )
 )
 
-def main():
+def main(verbose = False):
     mydb = mysql.connector.connect(
         host=HOST,
         user=USER,
@@ -210,9 +219,21 @@ def main():
     cursor = mydb.cursor()
 
     for table in db.get_tables():
+        table.set_verbose(verbose)
         table.cretae_table_command(cursor)
 
 
+def drop_tables():
+    mydb = mysql.connector.connect(
+        host=HOST,
+        user=USER,
+        password=PASSWORD,
+        database=DATABASE,
+        port=PORT
+    )
+    cursor = mydb.cursor()
+    for table in reversed(db.get_tables()):
+        table.drop_table(cursor)
 
 if __name__ == "__main__":
    main()

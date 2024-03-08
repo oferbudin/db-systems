@@ -45,7 +45,7 @@ def query_2(genre):
     result = cursor.fetchall()
     return result
 
-def query_3(cursor):
+def query_3():
     """
     This query returns the director whose film got the highest revenue whilst having a budget lower than average.
     """
